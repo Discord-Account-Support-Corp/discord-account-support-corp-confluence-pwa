@@ -1,10 +1,10 @@
 {
-  "name": "DASC Confluence Wiki",
-  "short_name": "DASC Wiki",
-  "start_url": ".",
+  "name": "Discord Confluence PWA",
+  "short_name": "Confluence",
+  "start_url": "https://discord-account-support-corp.atlassian.net/wiki",
   "display": "standalone",
   "background_color": "#ffffff",
-  "theme_color": "#0052CC",
+  "theme_color": "#0052cc",
   "icons": [
     {
       "src": "icon-192.png",
