@@ -3,44 +3,34 @@
 <head>
   <meta charset="UTF-8">
   <title>Discord Account Support Corp Wiki</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- PWA hooks -->
   <link rel="manifest" href="manifest.json">
   <meta name="theme-color" content="#0052CC">
-
-  <!-- App / tab icon -->
   <link rel="icon" href="icon-192.png" sizes="192x192" type="image/png">
 
-  <!-- Make it look like a web-app when launched from iOS home screen -->
+  <!-- iOS PWA support -->
   <meta name="apple-mobile-web-app-capable" content="yes">
   <link rel="apple-touch-icon" href="icon-512.png">
   <meta name="apple-mobile-web-app-status-bar-style" content="default">
 
   <style>
-    /* basic full-screen layout */
-    html,body{margin:0;height:100%;}
-    iframe{border:0;width:100%;height:100%;}
-    .fallback{
-      position:absolute;top:10px;left:10px;
-      background:#fff;padding:8px 12px;border-radius:4px;
-      font-family:sans-serif;font-size:14px;
-      box-shadow:0 2px 6px rgba(0,0,0,.2);z-index:10;
+    html, body { margin: 0; height: 100%; }
+    iframe { width: 100%; height: 100%; border: none; }
+    .fallback {
+      position: absolute; top: 10px; left: 10px;
+      background: white; padding: 8px 12px;
+      font-family: sans-serif; font-size: 14px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.2); z-index: 10;
     }
   </style>
 </head>
 <body>
-  <!-- Fallback link -->
   <div class="fallback">
-    If the wiki doesn’t load,&nbsp;
-    <a href="https://discord-account-support-corp.atlassian.net/wiki" target="_blank" rel="noopener">
-      click here
-    </a>.
+    If the wiki doesn’t load, 
+    <a href="https://discord-account-support-corp.atlassian.net/wiki" target="_blank">click here</a>.
   </div>
 
-  <!-- Confluence wrapped inside your domain -->
-  <iframe
-    src="https://discord-account-support-corp.atlassian.net/wiki"
-    loading="lazy"
-  ></iframe>
+  <iframe src="https://discord-account-support-corp.atlassian.net/wiki" loading="lazy"></iframe>
 </body>
 </html>
