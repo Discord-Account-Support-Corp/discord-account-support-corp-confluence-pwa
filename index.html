@@ -1,22 +1,60 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <title>Discord Account Support Corp Wiki</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="manifest" href="manifest.json">
-  <meta name="theme-color" content="#0052CC">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <link rel="manifest" href="manifest.json" />
+  <meta name="theme-color" content="#0052CC" />
+  <link rel="icon" href="icon-192.png" type="image/png" />
 
-  <!-- iOS support -->
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="default">
-  <link rel="apple-touch-icon" href="icon-512.png">
+  <!-- iOS Support -->
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <link rel="apple-touch-icon" href="icon-512.png" />
+
+  <style>
+    body {
+      font-family: sans-serif;
+      text-align: center;
+      padding: 50px;
+      background-color: #f4f6f8;
+    }
+    button {
+      background-color: #0052CC;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      font-size: 16px;
+      border-radius: 6px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0041a8;
+    }
+    #install-tip {
+      margin-top: 20px;
+      font-size: 14px;
+      color: #555;
+    }
+  </style>
 </head>
 <body>
-  <p>Redirecting to your Confluence wiki...</p>
+  <h2>Discord Account Support Corp Wiki</h2>
+  <p>Tap the button below to open the wiki.</p>
+
+  <button onclick="redirect()">Open Wiki</button>
+
+  <div id="install-tip">
+    <p>Want to use this as an app?</p>
+    <p>On iPhone: tap <strong>Share</strong> → <strong>Add to Home Screen</strong></p>
+  </div>
 
   <script>
-    window.location.replace("https://discord-account-support-corp.atlassian.net/wiki");
+    function redirect() {
+      window.location.href = "https://discord-account-support-corp.atlassian.net/wiki";
+    }
   </script>
 </body>
 </html>
