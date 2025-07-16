@@ -1,62 +1,57 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
+  <meta charset="UTF-8">
   <title>Discord Account Support Corp Wiki</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="manifest" href="manifest.json" />
-  <meta name="theme-color" content="#0052CC" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#0052CC">
 
-  <!-- iOS support -->
-  <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-  <link rel="apple-touch-icon" href="icon-512.png" />
+  <!-- Add PWA meta for iOS -->
+  <link rel="apple-touch-icon" href="icon-192.png">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <meta name="apple-mobile-web-app-title" content="DAS Wiki">
 
   <style>
     body {
-      font-family: sans-serif;
+      font-family: -apple-system, system-ui, sans-serif;
+      margin: 0;
+      padding: 2em;
       text-align: center;
-      padding: 50px;
-      background: #f4f6f8;
+      background-color: #f9f9f9;
     }
     h1 {
       color: #0052CC;
     }
     button {
-      margin-top: 20px;
-      padding: 12px 24px;
-      font-size: 16px;
-      color: white;
       background-color: #0052CC;
+      color: white;
+      padding: 12px 20px;
+      font-size: 16px;
       border: none;
-      border-radius: 5px;
+      border-radius: 8px;
       cursor: pointer;
     }
-    a {
-      display: block;
-      margin-top: 20px;
-      color: #0052CC;
-      font-size: 14px;
+    p {
+      margin-top: 1em;
+      color: #333;
     }
   </style>
 </head>
 <body>
-  <h1>Discord Account Support Corp</h1>
-  <p>This is your app launcher for the Confluence wiki.</p>
-
-  <button onclick="openWiki()">Open Wiki</button>
-
-  <a href="https://discord-account-support-corp.atlassian.net/wiki">If it doesn’t work, tap here</a>
-
-  <p style="margin-top: 40px; font-size: 14px; color: #555;">
-    To install this app, tap <strong>Share → Add to Home Screen</strong>.
-  </p>
+  <h1>Discord Account Support Corp Wiki</h1>
+  <p>This is your Confluence launcher app.</p>
+  <button onclick="window.open('https://discord-account-support-corp.atlassian.net/wiki', '_blank')">
+    Open Wiki Dashboard
+  </button>
+  <p>If it doesn't open, <a href="https://discord-account-support-corp.atlassian.net/wiki" target="_blank">click here</a>.</p>
 
   <script>
-    function openWiki() {
-      // Try to open in a new tab — may still open Safari on iOS
-      window.open("https://discord-account-support-corp.atlassian.net/wiki", "_blank");
-    }
+    // Optional: Auto-open after delay (can be removed if you want user to click)
+    setTimeout(() => {
+      window.open('https://discord-account-support-corp.atlassian.net/wiki', '_blank');
+    }, 3000);
   </script>
 </body>
 </html>
