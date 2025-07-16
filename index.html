@@ -7,7 +7,7 @@
   <link rel="manifest" href="manifest.json" />
   <meta name="theme-color" content="#0052CC" />
 
-  <!-- iOS PWA support -->
+  <!-- iOS support -->
   <meta name="apple-mobile-web-app-capable" content="yes" />
   <meta name="apple-mobile-web-app-status-bar-style" content="default" />
   <link rel="apple-touch-icon" href="icon-512.png" />
@@ -41,18 +41,21 @@
   </style>
 </head>
 <body>
-  <h1>Open the Wiki</h1>
-  <p>This is the launcher for your Confluence site.</p>
-  <button onclick="redirect()">Open Wiki</button>
-  <a href="https://discord-account-support-corp.atlassian.net/wiki">If it doesn’t work, click here</a>
+  <h1>Discord Account Support Corp</h1>
+  <p>This is your app launcher for the Confluence wiki.</p>
+
+  <button onclick="openWiki()">Open Wiki</button>
+
+  <a href="https://discord-account-support-corp.atlassian.net/wiki">If it doesn’t work, tap here</a>
 
   <p style="margin-top: 40px; font-size: 14px; color: #555;">
-    To use this as an app, tap <strong>Share</strong> → <strong>Add to Home Screen</strong> on iOS.
+    To install this app, tap <strong>Share → Add to Home Screen</strong>.
   </p>
 
   <script>
-    function redirect() {
-      window.location.href = "https://discord-account-support-corp.atlassian.net/wiki";
+    function openWiki() {
+      // Try to open in a new tab — may still open Safari on iOS
+      window.open("https://discord-account-support-corp.atlassian.net/wiki", "_blank");
     }
   </script>
 </body>
