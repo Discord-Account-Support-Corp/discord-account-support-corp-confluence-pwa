@@ -2,60 +2,44 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <title>Discord Account Support Corp Wiki</title>
+  <title>DAS Wiki</title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <link rel="manifest" href="manifest.json" />
   <meta name="theme-color" content="#0052CC" />
-
-  <!-- iOS meta -->
-  <link rel="apple-touch-icon" href="icon-192.png" />
   <meta name="apple-mobile-web-app-capable" content="yes" />
-  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
-  <meta name="apple-mobile-web-app-title" content="DAS Wiki" />
-
+  <link rel="apple-touch-icon" href="icon-192.png" />
   <style>
     body {
       font-family: system-ui, sans-serif;
-      margin: 0;
       padding: 2em;
-      background-color: #f9f9f9;
       text-align: center;
     }
-    h1 {
-      color: #0052CC;
-    }
     button {
-      background-color: #0052CC;
-      color: white;
       padding: 12px 24px;
+      background: #0052CC;
+      color: #fff;
       border: none;
       border-radius: 6px;
       font-size: 16px;
-      cursor: pointer;
     }
     p {
       margin-top: 1em;
-      font-size: 14px;
     }
   </style>
 </head>
 <body>
-  <h1>DAS Wiki Launcher</h1>
-  <p>Welcome! This app launches your Confluence dashboard.</p>
-  <button onclick="launchWiki()">Open Confluence Wiki</button>
-
-  <p>If you are not redirected, <a href="https://discord-account-support-corp.atlassian.net/wiki" target="_blank">click here</a>.</p>
+  <h1>DAS Wiki</h1>
+  <p>This app will redirect you to the Confluence dashboard.</p>
+  <button onclick="launchWiki()">Open Now</button>
+  <p>If you are not redirected, <a href="https://discord-account-support-corp.atlassian.net/wiki">click here</a>.</p>
 
   <script>
     function launchWiki() {
       window.location.href = "https://discord-account-support-corp.atlassian.net/wiki";
     }
 
-    // Optional auto-launch after short delay (only if already in PWA)
     if (window.matchMedia('(display-mode: standalone)').matches) {
-      setTimeout(() => {
-        launchWiki();
-      }, 3000);
+      setTimeout(launchWiki, 3000);
     }
   </script>
 </body>
