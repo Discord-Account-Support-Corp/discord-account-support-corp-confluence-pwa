@@ -1,7 +1,7 @@
 {
   "name": "Discord Confluence PWA",
   "short_name": "Confluence",
-"start_url": "./index.html"
+  "start_url": "/discord-account-support-corp-confluence-pwa/",
   "display": "standalone",
   "background_color": "#ffffff",
   "theme_color": "#0052cc",
